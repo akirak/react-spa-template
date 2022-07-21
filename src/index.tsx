@@ -9,7 +9,10 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById('root') ||
+    // Work around for preventing "Target Container is not a DOM element" error
+    // in tests
+    document.createElement('div')
 );
 root.render(
   <React.StrictMode>
