@@ -62,3 +62,7 @@ Here are suggestions for what one would do after scaffolding a project from this
 * Add a library for styling
 * i18n
 * @mswjs/data
+
+## Credits
+
+The structure and mock code is based on [Bulletproof React](https://github.com/alan2207/bulletproof-react/).
