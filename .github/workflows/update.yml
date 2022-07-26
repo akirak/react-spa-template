@@ -1,0 +1,47 @@
+name: Update dependencies
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * 6'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: cachix/install-nix-action@v17
+
+      - name: Update flake inputs
+        run: nix flake update
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Update pnpm lock file
+        run: pnpm update
+
+      - uses: peter-evans/create-pull-request@v4
+        id: pr
+        with:
+          commit-message: 'Update flake inputs'
+          base: master
+          title: 'chore: Update dependencies'
+          branch: create-pull-request/update
+          labels: automation,update
