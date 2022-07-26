@@ -1,4 +1,4 @@
-# React SPA Template for Toy Applications
+# Template for Toy React SPA Applications
 
 This is a boilerplate for single page applications (SPAs) with React.
 It lets you get started with developing a React SPA quickly without manual configuration of linters, Jest, Git hooks, etc.
