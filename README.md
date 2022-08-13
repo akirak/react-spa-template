@@ -55,13 +55,13 @@ To start a development server, run:
 pnpm start
 ```
 
-### Follow-up tasks
+### Further configuration
 
-Here are suggestions for what one would do after scaffolding a project from this template:
+In addition to the existing configuration, one might add the following libraries to a project created from this template:
 
-* Add a library for styling
-* i18n
-* @mswjs/data
+* Add a library for styling (e.g. Tailwind, Emotion, etc.)
+* i18n (react-i18next)
+* @mswjs/data for mock data
 
 ## Credits
 
