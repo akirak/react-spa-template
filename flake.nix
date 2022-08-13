@@ -18,7 +18,7 @@
       pkgs = import nixpkgs {
         inherit system;
         overlays = [
-          node-overlay.overlays.default
+          node-overlay.overlays.node-18
         ];
       };
     in {
