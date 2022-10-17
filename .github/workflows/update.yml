@@ -38,6 +38,10 @@ jobs:
         run: pnpm update
         continue-on-error: true
 
+      - name: Fix pnpm lock file
+        run: pnpm install --fix-lockfile
+        continue-on-error: true
+
       - uses: peter-evans/create-pull-request@v4
         id: pr
         with:
