@@ -34,6 +34,16 @@ If you are using Emacs, it is suggested you use the following packages:
 * flymake-eslint
 * reformatter.el (for running prettier)
 
+## Installation
+
+To scaffold a new project, you can use this repository as a GitHub template repository.
+
+Alternatively, you can clone this repository using Nix:
+
+``` shell
+nix flake new -t github:akirak/react-spa-template NAME
+```
+
 ## Usage
 
 If you are using Nix (with flakes enabled) and direnv, allow the direnv environment:
