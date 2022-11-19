@@ -1,5 +1,5 @@
 {
-  description = "Your next node.js project";
+  description = "React project";
 
   # Use the unstable nixpkgs to use the latest set of node packages
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/master";
@@ -13,7 +13,13 @@
     flake-utils,
     node-overlay,
   }:
-    flake-utils.lib.eachDefaultSystem
+    {
+      templates.default = {
+        path = ./.;
+        description = "React SPA project";
+      };
+    }
+    // flake-utils.lib.eachDefaultSystem
     (system: let
       pkgs = import nixpkgs {
         inherit system;
