@@ -69,15 +69,15 @@
       "locked": {
         "lastModified": 1660365587,
         "narHash": "sha256-EbOVTDv4XdQYCDaCvW4bAZoeBcwqcyL19zeyzKxdmIU=",
-        "owner": "~akirak",
+        "owner": "akirak",
         "repo": "node-packages-overlay",
         "rev": "57b9cb603dba3fd72ea414975e3afdaeaa6624ed",
-        "type": "sourcehut"
+        "type": "github"
       },
       "original": {
-        "owner": "~akirak",
+        "owner": "akirak",
         "repo": "node-packages-overlay",
-        "type": "sourcehut"
+        "type": "github"
       }
     },
     "node2nix": {

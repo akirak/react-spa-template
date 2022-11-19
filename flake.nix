@@ -5,7 +5,7 @@
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/master";
 
   # Use pnpm with a recent version of node.js
-  inputs.node-overlay.url = "sourcehut:~akirak/node-packages-overlay";
+  inputs.node-overlay.url = "github:akirak/node-packages-overlay";
 
   outputs = {
     self,
