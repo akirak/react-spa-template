@@ -1,5 +1,7 @@
 # Template for Toy React SPA Applications
 
+**Deprecation notice: This template was created in mid-2022. In 2023, I would use Vite, so I won't maintain this repository any more**.
+
 This is a boilerplate for single page applications (SPAs) with React.
 It lets you get started with developing a React SPA quickly without manual configuration of linters, Jest, Git hooks, etc.
 
